@@ -1,0 +1,22 @@
+{
+  "name": "testcafe-ecommerce-test",
+  "version": "1.0.0",
+  "description": "TestCafe test for e-commerce website",
+  "main": "edit-account-info.js",
+  "scripts": {
+    "test:edit-account-info": "testcafe chrome edit-account-info.js",
+    "test:blog-comment": "testcafe chrome blog-comment.js",
+    "test:filter-products": "testcafe chrome filter-products.js"
+  },
+  "keywords": [
+    "testcafe",
+    "testing",
+    "e2e",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "testcafe": "^3.0.0"
+  }
+}
