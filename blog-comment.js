@@ -4,7 +4,7 @@ fixture('Blog Comment Test')
   .page(
     'https://ecommerce-playground.lambdatest.io/index.php?route=account/login'
   )
-  .skipJsErrors(); // 외부 스크립트 오류 무시
+  .skipJsErrors(); // ignore external script errors
 
 test('Post a comment on blog article and verify it appears', async (t) => {
   // Step 1: Navigate to Login Page and log in with a registered user account
@@ -73,8 +73,8 @@ test('Post a comment on blog article and verify it appears', async (t) => {
     .ok('Confirmation message should appear');
 
   // Step 8: The comment is displayed below on the comments list
-  // 댓글 리스트는 #comment 안의 ul.list-unstyled 구조로 되어 있음
-  // 각 댓글은 li.media.comment 요소
+  // the comments list is structured inside #comment with ul.list-unstyled
+  // each comment is a li.media.comment element
   const commentsList = Selector('#comment ul.list-unstyled');
   const postedComment = commentsList
     .find('li.media.comment')
